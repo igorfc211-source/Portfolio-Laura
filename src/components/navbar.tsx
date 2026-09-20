@@ -6,7 +6,7 @@ import Image from "next/image";
 import { LuMenu, LuX } from "react-icons/lu";
 
 // Foto da Laura (arquivo em public/images/). Para trocar, basta mudar aqui.
-const LAURA_PHOTO = "/images/lindaPerfeita.png";
+const LAURA_PHOTO = "/images/logo/logo2.png";
 
 const navLinks = [
   { label: "Portfólio", href: "#portfolio", id: "portfolio" },
