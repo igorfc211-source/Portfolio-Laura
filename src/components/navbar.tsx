@@ -2,7 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import { LuMenu, LuX } from "react-icons/lu";
+
+// Foto da Laura (arquivo em public/images/). Para trocar, basta mudar aqui.
+const LAURA_PHOTO = "/images/lindaPerfeita.png";
 
 const navLinks = [
   { label: "Portfólio", href: "#portfolio", id: "portfolio" },
@@ -10,6 +14,31 @@ const navLinks = [
   { label: "Processo", href: "#processo", id: "processo" },
   { label: "Contato", href: "#contato", id: "contato" },
 ];
+
+/** Foto redonda da Laura; se a imagem falhar, mostra o monograma "LT". */
+function NavAvatar() {
+  const [failed, setFailed] = useState(false);
+
+  return (
+    <span className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full bg-blue-600 shadow-sm ring-2 ring-white">
+      {failed ? (
+        <span className="grid h-full w-full place-items-center text-sm font-black text-white">
+          LT
+        </span>
+      ) : (
+        <Image
+          src={LAURA_PHOTO}
+          alt="Foto de Laura Tagliari"
+          fill
+          priority
+          sizes="40px"
+          className="object-cover object-top"
+          onError={() => setFailed(true)}
+        />
+      )}
+    </span>
+  );
+}
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -62,9 +91,7 @@ export function Navbar() {
             className="flex items-center gap-3 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-100"
             aria-label="Ir para o início"
           >
-            <span className="grid h-9 w-9 place-items-center overflow-hidden rounded-xl bg-blue-600 text-sm font-black text-white shadow-sm">
-              LT
-            </span>
+            <NavAvatar />
             <span className="text-sm font-black tracking-tight text-slate-950">
               Laura <span className="text-blue-700">Tagliari</span>
             </span>
