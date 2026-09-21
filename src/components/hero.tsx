@@ -15,7 +15,7 @@ import { SocialLink } from "./social-link";
 /* ── Conteúdo editável ────────────────────────────────────────────────────── */
 
 // Foto principal da Laura. Troque somente este caminho quando o arquivo final chegar.
-const LAURA_PHOTO = "/images/Mulherlinda.jpeg";
+const LAURA_PHOTO = "/images/lindaPerfeita.jpeg";
 
 const TAGLINE = "ESPECIALISTA EM MENTORIA COM APRESENTAÇÕES";
 const CTA_LABEL = "Solicitar meu slide";
