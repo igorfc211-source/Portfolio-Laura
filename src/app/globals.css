@@ -2,12 +2,16 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0f172a;
-  --brand-blue: #2563eb;
-  --brand-blue-dark: #1d4ed8;
-  --surface-soft: #f8fafc;
+  --foreground: #21140f;
+  --brand-dark: #3a2118;
+  --brand-medium: #5a3427;
+  --brand-warm: #7a4a38;
+  --brand-cream: #e8d8c8;
+  --brand-offwhite: #f5eee8;
+  --brand-ink: #21140f;
+  --surface-soft: #f5eee8;
   --card-radius: 1.5rem;
-  --card-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  --card-shadow: 0 18px 45px rgba(58, 33, 24, 0.1);
 }
 
 @theme inline {

@@ -53,11 +53,11 @@ function Portrait() {
   const [failed, setFailed] = useState(false);
 
   return (
-    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2.25rem] bg-gradient-to-br from-blue-50 via-slate-100 to-white shadow-2xl shadow-slate-300/50 ring-1 ring-slate-900/5">
+    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2.25rem] bg-gradient-to-br from-[#E8D8C8] via-[#F5EEE8] to-white shadow-2xl shadow-[#3A2118]/20 ring-1 ring-[#3A2118]/10">
       {failed ? (
         // Placeholder caso a imagem não exista / falhe ao carregar
         <div className="absolute inset-0 grid place-items-center">
-          <span className="text-7xl font-extrabold tracking-tight text-blue-600/25">
+          <span className="text-7xl font-extrabold tracking-tight text-[#7A4A38]/35">
             LT
           </span>
         </div>
@@ -97,7 +97,7 @@ function MiniSlide({ animate }: { animate: boolean }) {
   return (
     <div
       aria-hidden="true"
-      className="overflow-hidden rounded-xl border border-white/10 bg-[#0B1120] shadow-2xl shadow-slate-900/30"
+      className="overflow-hidden rounded-xl border border-[#E8D8C8]/15 bg-[#21140F] shadow-2xl shadow-[#21140F]/30"
     >
       <div className="flex h-6 items-center gap-1 border-b border-white/5 px-2.5">
         <span className="h-1.5 w-1.5 rounded-full bg-[#FF5F57]/80" />
@@ -118,7 +118,7 @@ function MiniSlide({ animate }: { animate: boolean }) {
             {layout === "cover" && (
               <div className="flex h-full flex-col justify-between">
                 <div>
-                  <div className="mb-2 h-1 w-8 rounded-full bg-blue-500" />
+                  <div className="mb-2 h-1 w-8 rounded-full bg-[#C79A7B]" />
                   <div className="mb-1.5 h-2 w-3/4 rounded-full bg-white/90" />
                   <div className="h-2 w-1/2 rounded-full bg-white/40" />
                 </div>
@@ -129,7 +129,7 @@ function MiniSlide({ animate }: { animate: boolean }) {
                       className="flex-1 rounded-t-sm"
                       style={{
                         height: `${h}%`,
-                        background: i === 3 ? "#3B82F6" : "rgba(255,255,255,0.1)",
+                        background: i === 3 ? "#C79A7B" : "rgba(245,238,232,0.12)",
                       }}
                     />
                   ))}
@@ -141,7 +141,7 @@ function MiniSlide({ animate }: { animate: boolean }) {
               <div className="flex h-full flex-col justify-between">
                 <div className="flex items-center justify-between">
                   <div className="h-1.5 w-10 rounded-full bg-white/40" />
-                  <span className="rounded border border-emerald-500/20 bg-emerald-500/10 px-1.5 py-0.5 font-mono text-[8px] text-emerald-400">
+                  <span className="rounded border border-[#C79A7B]/25 bg-[#C79A7B]/10 px-1.5 py-0.5 font-mono text-[8px] text-[#E8D8C8]">
                     +34.8%
                   </span>
                 </div>
@@ -152,7 +152,7 @@ function MiniSlide({ animate }: { animate: boolean }) {
                       className="flex-1 rounded-t-sm"
                       style={{
                         height: `${h}%`,
-                        background: i === 7 ? "#60A5FA" : "rgba(255,255,255,0.12)",
+                        background: i === 7 ? "#C79A7B" : "rgba(245,238,232,0.12)",
                       }}
                     />
                   ))}
@@ -172,15 +172,15 @@ function MiniSlide({ animate }: { animate: boolean }) {
                       <div
                         className="h-2 w-full rounded-full"
                         style={{
-                          background: i === 1 ? "#93C5FD" : "rgba(255,255,255,0.8)",
+                          background: i === 1 ? "#E8D8C8" : "rgba(255,255,255,0.78)",
                         }}
                       />
                     </div>
                   ))}
                 </div>
-                <div className="flex items-center justify-between rounded-md border border-blue-500/20 bg-blue-500/10 p-2">
-                  <div className="h-1.5 w-14 rounded-full bg-blue-400/80" />
-                  <div className="h-1.5 w-1.5 rounded-full bg-blue-400" />
+                <div className="flex items-center justify-between rounded-md border border-[#C79A7B]/20 bg-[#C79A7B]/10 p-2">
+                  <div className="h-1.5 w-14 rounded-full bg-[#C79A7B]/80" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-[#C79A7B]" />
                 </div>
               </div>
             )}
@@ -197,21 +197,21 @@ export function HeroSection() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="relative isolate flex w-full items-center overflow-hidden bg-white px-6 pt-28 pb-16 md:px-12 md:pt-32 md:pb-20 lg:px-20 lg:pt-28">
+    <section className="relative isolate flex w-full items-center overflow-hidden bg-[#F5EEE8] px-6 pt-28 pb-16 md:px-12 md:pt-32 md:pb-20 lg:px-20 lg:pt-28">
       {/* Fundo: brilho suave + grade de pontos que se dissolve */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
         <div
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(circle at 75% 45%, rgba(37, 99, 235, 0.07) 0%, transparent 60%)",
+              "radial-gradient(circle at 75% 45%, rgba(122, 74, 56, 0.16) 0%, transparent 60%)",
           }}
         />
         <div
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "radial-gradient(rgba(148, 163, 184, 0.35) 1px, transparent 1px)",
+              "radial-gradient(rgba(90, 52, 39, 0.18) 1px, transparent 1px)",
             backgroundSize: "24px 24px",
             maskImage:
               "radial-gradient(ellipse at 72% 50%, black 0%, transparent 65%)",
@@ -230,46 +230,46 @@ export function HeroSection() {
           className="flex flex-col"
         >
           <motion.div variants={fadeUp} className="mb-6">
-            <span className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50/80 px-3.5 py-1.5">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-blue-600" />
-              <span className="text-xs font-bold uppercase tracking-[0.14em] text-blue-700">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#E8D8C8] bg-white/45 px-3.5 py-1.5">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-[#7A4A38]" />
+              <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#5A3427]">
                 DESIGN DE APRESENTAÇÕES
               </span>
             </span>
           </motion.div>
 
           <motion.div variants={fadeUp}>
-            <p className="mb-2 text-sm font-medium text-slate-500">
+            <p className="mb-2 text-sm font-medium text-[#7A4A38]">
               Olá, eu sou a
             </p>
-            <h1 className="text-5xl font-extrabold leading-[0.95] tracking-tight text-slate-900 md:text-6xl lg:text-7xl">
+            <h1 className="text-5xl font-extrabold leading-[0.95] tracking-tight text-[#21140F] md:text-6xl lg:text-7xl">
               Laura <br />
-              <span className="bg-gradient-to-r from-blue-700 via-blue-600 to-sky-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#3A2118] via-[#5A3427] to-[#7A4A38] bg-clip-text text-transparent">
                 Tagliari
               </span>
             </h1>
           </motion.div>
 
           <motion.div variants={fadeUp} className="my-6 flex items-center gap-3">
-            <span className="h-0.5 w-10 shrink-0 rounded-full bg-blue-600" />
-            <span className="text-xs font-bold leading-relaxed tracking-[0.18em] text-slate-500">
+            <span className="h-0.5 w-10 shrink-0 rounded-full bg-[#7A4A38]" />
+            <span className="text-xs font-bold leading-relaxed tracking-[0.18em] text-[#7A4A38]">
               {TAGLINE}
             </span>
           </motion.div>
 
           <motion.h2
             variants={fadeUp}
-            className="max-w-lg text-xl font-semibold leading-snug text-slate-800 md:text-2xl"
+            className="max-w-lg text-xl font-semibold leading-snug text-[#3A2118] md:text-2xl"
           >
             Transformo slides entediantes em{" "}
-            <span className="text-blue-600 underline decoration-blue-200 underline-offset-4">
+            <span className="text-[#7A4A38] underline decoration-[#E8D8C8] underline-offset-4">
               narrativas que fecham negócios.
             </span>
           </motion.h2>
 
           <motion.p
             variants={fadeUp}
-            className="mt-4 max-w-md text-base leading-relaxed text-slate-500"
+            className="mt-4 max-w-md text-base leading-relaxed text-[#5A3427]/80"
           >
             Pitch decks para captação, reuniões de conselho e keynotes desenhados
             com princípios de neuro-design e foco absoluto em conversão.
@@ -278,14 +278,14 @@ export function HeroSection() {
           <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
             <a
               href="#contato"
-              className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/25 transition-all hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-blue-600/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 active:translate-y-0"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#3A2118] px-6 py-3.5 text-sm font-semibold text-[#F5EEE8] shadow-lg shadow-[#3A2118]/25 transition-all hover:-translate-y-0.5 hover:bg-[#5A3427] hover:shadow-[#3A2118]/35 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7A4A38] focus-visible:ring-offset-2 active:translate-y-0"
             >
               {CTA_LABEL}
               <LuArrowRight className="h-4 w-4" />
             </a>
             <a
               href="#portfolio"
-              className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3.5 text-sm font-semibold text-slate-700 transition-all hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2"
+              className="inline-flex items-center gap-2 rounded-xl border border-[#E8D8C8] bg-white/70 px-6 py-3.5 text-sm font-semibold text-[#3A2118] transition-all hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7A4A38] focus-visible:ring-offset-2"
             >
               Ver Portfólio
             </a>
@@ -302,17 +302,17 @@ export function HeroSection() {
 
           <motion.dl
             variants={fadeUp}
-            className="mt-12 grid grid-cols-3 divide-x divide-slate-100 border-t border-slate-100 pt-8"
+            className="mt-12 grid grid-cols-3 divide-x divide-[#E8D8C8] border-t border-[#E8D8C8] pt-8"
           >
             {stats.map((s) => (
               <div key={s.label} className="pl-4 first:pl-0">
                 <dt className="sr-only">{s.label}</dt>
-                <dd className="block text-2xl font-extrabold tabular-nums text-slate-900">
+                <dd className="block text-2xl font-extrabold tabular-nums text-[#21140F]">
                   {s.value}
                 </dd>
                 <span
                   aria-hidden="true"
-                  className="mt-1 block text-[11px] font-medium leading-snug text-slate-400"
+                  className="mt-1 block text-[11px] font-medium leading-snug text-[#7A4A38]/70"
                 >
                   {s.label}
                 </span>
@@ -331,23 +331,23 @@ export function HeroSection() {
           {/* Camadas decorativas atrás da foto */}
           <div
             aria-hidden="true"
-            className="absolute -right-10 -top-10 h-56 w-56 rounded-full bg-blue-500/15 blur-3xl"
+            className="absolute -right-10 -top-10 h-56 w-56 rounded-full bg-[#7A4A38]/18 blur-3xl"
           />
           <div
             aria-hidden="true"
-            className="absolute inset-x-0 top-0 aspect-[4/5] translate-x-4 translate-y-4 rounded-[2rem] border border-blue-200/70"
+            className="absolute inset-x-0 top-0 aspect-[4/5] translate-x-4 translate-y-4 rounded-[2rem] border border-[#E8D8C8]"
           />
 
           <div className="relative">
             <Portrait />
 
             {/* Selo de agenda */}
-            <div className="absolute left-4 top-4 flex items-center gap-2.5 rounded-full border border-slate-200/80 bg-white/90 px-4 py-1.5 shadow-sm backdrop-blur">
+            <div className="absolute left-4 top-4 flex items-center gap-2.5 rounded-full border border-[#E8D8C8]/80 bg-[#F5EEE8]/90 px-4 py-1.5 shadow-sm backdrop-blur">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#7A4A38] opacity-60" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-[#7A4A38]" />
               </span>
-              <span className="text-[11px] font-semibold tracking-wide text-slate-700">
+              <span className="text-[11px] font-semibold tracking-wide text-[#3A2118]">
                 Agenda aberta para este mês
               </span>
             </div>
@@ -358,9 +358,9 @@ export function HeroSection() {
             </div>
 
             {/* Citação */}
-            <div className="absolute -bottom-6 left-3 right-3 rounded-2xl border border-slate-200/80 border-l-4 border-l-blue-600 bg-white/95 p-4 shadow-xl shadow-slate-900/10 backdrop-blur-md sm:-left-8 sm:right-auto sm:w-[74%]">
-              <p className="text-sm font-bold text-slate-900">Laura Tagliari</p>
-              <p className="mt-0.5 text-xs italic leading-relaxed text-slate-500">
+            <div className="absolute -bottom-6 left-3 right-3 rounded-2xl border border-[#E8D8C8]/80 border-l-4 border-l-[#7A4A38] bg-[#F5EEE8]/95 p-4 shadow-xl shadow-[#21140F]/10 backdrop-blur-md sm:-left-8 sm:right-auto sm:w-[74%]">
+              <p className="text-sm font-bold text-[#21140F]">Laura Tagliari</p>
+              <p className="mt-0.5 text-xs italic leading-relaxed text-[#5A3427]/75">
                 &ldquo;Uma boa ideia mal apresentada é apenas um rascunho
                 caro.&rdquo;
               </p>

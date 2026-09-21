@@ -20,9 +20,9 @@ function ModalCover({ slide }: { slide: SlideWithStatus }) {
   }
 
   return (
-    <div className="absolute inset-0 grid place-items-center bg-gradient-to-br from-blue-950 via-slate-950 to-slate-900 text-center text-white">
+    <div className="absolute inset-0 grid place-items-center bg-gradient-to-br from-[#21140F] via-[#3A2118] to-[#5A3427] text-center text-[#F5EEE8]">
       <div>
-        <LuFileText className="mx-auto mb-5 h-12 w-12 text-blue-200" />
+        <LuFileText className="mx-auto mb-5 h-12 w-12 text-[#E8D8C8]" />
         <p className="text-2xl font-black tracking-tight">{slide.title}</p>
       </div>
     </div>
@@ -90,7 +90,7 @@ export function PdfModal({
 
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex flex-col bg-slate-950 text-white"
+      className="fixed inset-0 z-50 flex flex-col bg-[#21140F] text-[#F5EEE8]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -99,9 +99,9 @@ export function PdfModal({
       aria-labelledby="pdf-modal-title"
       ref={dialogRef}
     >
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 bg-slate-950/95 px-4 py-3 backdrop-blur md:px-6">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#E8D8C8]/10 bg-[#21140F]/95 px-4 py-3 backdrop-blur md:px-6">
         <div>
-          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-300">
+          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#E8D8C8]">
             Apresentação
           </p>
           <h3 id="pdf-modal-title" className="text-base font-bold md:text-lg">
@@ -112,7 +112,7 @@ export function PdfModal({
           <a
             href={slide.pdf}
             download
-            className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2 text-xs font-semibold transition-colors hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            className="inline-flex items-center gap-2 rounded-full bg-[#F5EEE8]/10 px-3 py-2 text-xs font-semibold transition-colors hover:bg-[#F5EEE8]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E8D8C8]"
           >
             <LuDownload className="h-4 w-4" />
             Baixar PDF
@@ -121,7 +121,7 @@ export function PdfModal({
             href={slide.pdf}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2 text-xs font-semibold transition-colors hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            className="inline-flex items-center gap-2 rounded-full bg-[#F5EEE8]/10 px-3 py-2 text-xs font-semibold transition-colors hover:bg-[#F5EEE8]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E8D8C8]"
           >
             <LuExternalLink className="h-4 w-4" />
             Abrir em nova aba
@@ -131,21 +131,21 @@ export function PdfModal({
             onClick={onClose}
             ref={closeRef}
             aria-label="Fechar visualização do PDF"
-            className="grid h-10 w-10 place-items-center rounded-full bg-white text-slate-950 transition-colors hover:bg-blue-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            className="grid h-10 w-10 place-items-center rounded-full bg-[#F5EEE8] text-[#21140F] transition-colors hover:bg-[#E8D8C8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E8D8C8]"
           >
             <LuX className="h-5 w-5" />
           </button>
         </div>
       </div>
 
-      <div className="relative flex-1 bg-slate-900">
+      <div className="relative flex-1 bg-[#21140F]">
         {showMobileFallback ? (
           <div className="grid h-full place-items-center p-6">
             <div className="w-full max-w-sm text-center">
-              <div className="relative mb-6 aspect-[16/10] overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
+              <div className="relative mb-6 aspect-[16/10] overflow-hidden rounded-3xl border border-[#E8D8C8]/10 shadow-2xl">
                 <ModalCover slide={slide} />
               </div>
-              <p className="text-sm leading-6 text-slate-300">
+              <p className="text-sm leading-6 text-[#E8D8C8]/80">
                 Se o PDF não abrir embutido no seu navegador, use uma das opções
                 abaixo para visualizar ou baixar o arquivo.
               </p>
@@ -154,14 +154,14 @@ export function PdfModal({
                   href={slide.pdf}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white"
+                  className="rounded-xl bg-[#5A3427] px-5 py-3 text-sm font-semibold text-[#F5EEE8]"
                 >
                   Abrir em nova aba
                 </a>
                 <a
                   href={slide.pdf}
                   download
-                  className="rounded-xl border border-white/15 bg-white/10 px-5 py-3 text-sm font-semibold text-white"
+                  className="rounded-xl border border-[#E8D8C8]/15 bg-[#F5EEE8]/10 px-5 py-3 text-sm font-semibold text-[#F5EEE8]"
                 >
                   Baixar
                 </a>

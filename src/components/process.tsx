@@ -33,14 +33,14 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section id="processo" className="w-full bg-[#F8FAFC] py-20 md:py-28 px-6 md:px-12 lg:px-20">
+    <section id="processo" className="w-full bg-[#F5EEE8] py-20 md:py-28 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
 
         <FadeIn>
           <div className="text-center mb-16">
             <SectionEyebrow text="Como funciona" />
             <SectionTitle highlight="do briefing à entrega.">Processo claro,</SectionTitle>
-            <p className="text-sm text-slate-400 mt-4 max-w-md mx-auto leading-relaxed">
+            <p className="text-sm text-[#5A3427]/70 mt-4 max-w-md mx-auto leading-relaxed">
               Um processo transparente e eficiente para garantir resultados excepcionais dentro do prazo.
             </p>
           </div>
@@ -50,7 +50,7 @@ export function ProcessSection() {
         <FadeIn delay={0.1}>
           <div className="relative">
             {/* Linha conectora (desktop) */}
-            <div className="hidden lg:block absolute top-9 left-0 right-0 h-px bg-slate-200" style={{ top: "2.25rem" }} />
+            <div className="hidden lg:block absolute top-9 left-0 right-0 h-px bg-[#D7BFAE]" style={{ top: "2.25rem" }} />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
               {steps.map((step, i) => (
@@ -59,14 +59,14 @@ export function ProcessSection() {
                   <div
                     className={`w-11 h-11 rounded-full flex items-center justify-center font-bold text-sm mb-4 relative z-10 border-2 transition-colors ${
                       i === 0
-                        ? "bg-blue-600 text-white border-blue-600"
-                        : "bg-white text-slate-500 border-slate-200"
+                        ? "bg-[#3A2118] text-[#F5EEE8] border-[#3A2118]"
+                        : "bg-white text-[#7A4A38] border-[#E8D8C8]"
                     }`}
                   >
                     {step.number}
                   </div>
-                  <h3 className="font-serif text-base font-semibold text-[#0F172A] mb-2">{step.title}</h3>
-                  <p className="text-xs text-slate-400 leading-relaxed max-w-[160px]">{step.description}</p>
+                  <h3 className="font-serif text-base font-semibold text-[#21140F] mb-2">{step.title}</h3>
+                  <p className="text-xs text-[#5A3427]/70 leading-relaxed max-w-[160px]">{step.description}</p>
                 </div>
               ))}
             </div>
@@ -78,7 +78,7 @@ export function ProcessSection() {
           <div className="mt-14 text-center">
             <a
               href="#contato"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#7A4A38] hover:text-[#3A2118] transition-colors"
             >
               Iniciar um projeto
               <LuArrowRight className="h-4 w-4" />

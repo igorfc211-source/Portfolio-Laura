@@ -47,7 +47,7 @@ export function FadeIn({
 
 export function SectionEyebrow({ text }: { text: string }) {
   return (
-    <span className="text-xs font-semibold tracking-[2.5px] uppercase text-blue-600 block mb-3">
+    <span className="text-xs font-semibold tracking-[2.5px] uppercase text-[#7A4A38] block mb-3">
       {text}
     </span>
   );
@@ -63,12 +63,12 @@ export function SectionTitle({
   highlight?: string;
 }) {
   return (
-    <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#0F172A] tracking-tight leading-tight">
+    <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#21140F] tracking-tight leading-tight">
       {children}
       {highlight && (
         <>
           <br />
-          <em className="not-italic text-blue-600">{highlight}</em>
+          <em className="not-italic text-[#7A4A38]">{highlight}</em>
         </>
       )}
     </h2>

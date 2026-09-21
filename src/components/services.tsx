@@ -54,7 +54,7 @@ export function ServicesSection() {
               <SectionEyebrow text="Diante a seu pedido" />
               <SectionTitle highlight="para cada necessidade.">Uma solução</SectionTitle>
             </div>
-            <p className="text-sm text-slate-400 max-w-xs leading-relaxed md:text-right">
+            <p className="text-sm text-[#5A3427]/65 max-w-xs leading-relaxed md:text-right">
               Do briefing à entrega final, cada projeto é tratado com atenção total à estratégia e ao detalhe visual.
             </p>
           </div>
@@ -66,14 +66,14 @@ export function ServicesSection() {
 
             return (
               <FadeIn key={i} delay={i * 0.05}>
-                <div className="group p-6 rounded-2xl border border-slate-100 hover:border-blue-200 hover:bg-blue-50/40 transition-all duration-300 h-full">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4 group-hover:bg-blue-100 transition-colors">
+                <div className="group p-6 rounded-2xl border border-[#E8D8C8] bg-white hover:border-[#CFAE99] hover:bg-[#F5EEE8] transition-all duration-300 h-full hover:-translate-y-1 hover:shadow-xl hover:shadow-[#3A2118]/8">
+                  <div className="w-10 h-10 rounded-xl bg-[#F5EEE8] text-[#7A4A38] flex items-center justify-center mb-4 group-hover:bg-[#E8D8C8] transition-colors">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h3 className="font-serif text-base font-semibold text-[#0F172A] mb-2 tracking-tight">
+                  <h3 className="font-serif text-base font-semibold text-[#21140F] mb-2 tracking-tight">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-slate-400 leading-relaxed">
+                  <p className="text-sm text-[#5A3427]/70 leading-relaxed">
                     {service.description}
                   </p>
                 </div>

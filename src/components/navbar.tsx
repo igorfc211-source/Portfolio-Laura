@@ -20,9 +20,9 @@ function NavAvatar() {
   const [failed, setFailed] = useState(false);
 
   return (
-    <span className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full bg-blue-600 shadow-sm ring-2 ring-white">
+    <span className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full bg-[#5A3427] shadow-sm ring-2 ring-[#F5EEE8]">
       {failed ? (
-        <span className="grid h-full w-full place-items-center text-sm font-black text-white">
+        <span className="grid h-full w-full place-items-center text-sm font-black text-[#F5EEE8]">
           LT
         </span>
       ) : (
@@ -81,19 +81,19 @@ export function Navbar() {
   return (
     <>
       <nav
-        className={`fixed left-0 right-0 top-0 z-40 border-b border-slate-200/80 bg-slate-100/88 backdrop-blur-xl transition-all duration-300 ${
-          scrolled ? "py-3 shadow-lg shadow-slate-950/5" : "py-4"
+        className={`fixed left-0 right-0 top-0 z-40 border-b border-[#E8D8C8]/80 bg-[#F5EEE8]/88 backdrop-blur-xl transition-all duration-300 ${
+          scrolled ? "py-3 shadow-lg shadow-[#21140F]/5" : "py-4"
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-12 lg:px-20">
           <a
             href="#"
-            className="flex items-center gap-3 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-100"
+            className="flex items-center gap-3 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7A4A38] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F5EEE8]"
             aria-label="Ir para o início"
           >
             <NavAvatar />
-            <span className="text-sm font-black tracking-tight text-slate-950">
-              Laura <span className="text-blue-700">Tagliari</span>
+            <span className="text-sm font-black tracking-tight text-[#21140F]">
+              Laura <span className="text-[#7A4A38]">Tagliari</span>
             </span>
           </a>
 
@@ -104,10 +104,10 @@ export function Navbar() {
                 <a
                   key={link.id}
                   href={link.href}
-                  className={`rounded-full px-1 py-2 text-xs font-bold uppercase tracking-[0.14em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-100 ${
+                  className={`rounded-full px-1 py-2 text-xs font-bold uppercase tracking-[0.14em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7A4A38] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F5EEE8] ${
                     active
-                      ? "text-blue-700"
-                      : "text-slate-600 hover:text-slate-950"
+                      ? "text-[#7A4A38]"
+                      : "text-[#5A3427]/75 hover:text-[#21140F]"
                   }`}
                 >
                   {link.label}
@@ -116,7 +116,7 @@ export function Navbar() {
             })}
             <a
               href="#contato"
-              className="rounded-full bg-blue-600 px-5 py-2.5 text-xs font-bold uppercase tracking-[0.12em] text-white shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5 hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-100"
+              className="rounded-full bg-[#3A2118] px-5 py-2.5 text-xs font-bold uppercase tracking-[0.12em] text-[#F5EEE8] shadow-lg shadow-[#3A2118]/20 transition-all hover:-translate-y-0.5 hover:bg-[#5A3427] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7A4A38] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F5EEE8]"
             >
               Solicitar meu slide
             </a>
@@ -125,7 +125,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setMobileOpen((open) => !open)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-slate-900 shadow-sm transition-colors hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 md:hidden"
+            className="grid h-10 w-10 place-items-center rounded-full border border-[#E8D8C8] bg-[#F5EEE8] text-[#21140F] shadow-sm transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7A4A38] focus-visible:ring-offset-2 md:hidden"
             aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={mobileOpen}
           >
@@ -144,7 +144,7 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-30 bg-slate-950/30 pt-20 backdrop-blur-sm md:hidden"
+            className="fixed inset-0 z-30 bg-[#21140F]/35 pt-20 backdrop-blur-sm md:hidden"
             onClick={() => setMobileOpen(false)}
           >
             <motion.div
@@ -152,7 +152,7 @@ export function Navbar() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -18, opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="mx-4 overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 shadow-2xl"
+              className="mx-4 overflow-hidden rounded-3xl border border-[#E8D8C8] bg-[#F5EEE8] p-3 shadow-2xl"
               onClick={(event) => event.stopPropagation()}
             >
               {navLinks.map((link) => (
@@ -162,8 +162,8 @@ export function Navbar() {
                   onClick={() => setMobileOpen(false)}
                   className={`flex items-center justify-between rounded-2xl px-4 py-4 text-base font-bold transition-colors ${
                     activeSection === link.id
-                      ? "bg-blue-50 text-blue-700"
-                      : "text-slate-800 hover:bg-slate-50"
+                      ? "bg-[#E8D8C8] text-[#3A2118]"
+                      : "text-[#3A2118] hover:bg-white/70"
                   }`}
                 >
                   {link.label}
@@ -173,7 +173,7 @@ export function Navbar() {
               <a
                 href="#contato"
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 flex items-center justify-center rounded-2xl bg-blue-600 px-5 py-4 text-sm font-bold uppercase tracking-[0.12em] text-white"
+                className="mt-2 flex items-center justify-center rounded-2xl bg-[#3A2118] px-5 py-4 text-sm font-bold uppercase tracking-[0.12em] text-[#F5EEE8]"
               >
                 Solicitar meu slide
               </a>

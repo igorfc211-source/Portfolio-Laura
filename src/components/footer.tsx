@@ -1,28 +1,38 @@
 "use client";
 
-import { primarySocials } from "@/src/lib/data/social";
+import { socials } from "@/src/lib/data/social";
+import Image from "next/image";
 import { SocialLink } from "./social-link";
+
+const footerLinks = [
+  { label: "Portfólio", href: "#portfolio" },
+  { label: "Serviços", href: "#servicos" },
+  { label: "Processo", href: "#processo" },
+  { label: "Contato", href: "#contato" },
+];
 
 export function Footer() {
   return (
-    <footer className="w-full bg-[#080E1A] border-t border-white/5 py-12 px-6 md:px-12 lg:px-20">
+    <footer className="w-full bg-[#21140F] border-t border-[#E8D8C8]/10 py-12 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           {/* Brand */}
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center">
-              <img
+              <Image
                 src="/images/lindaPerfeita.png"
                 alt="Lindissima"
-                className="w-full h-full object-contain"
+                width={32}
+                height={32}
+                className="h-full w-full object-contain"
               />
             </div>
 
             <div>
-              <p className="font-serif text-sm font-bold text-white">
+              <p className="font-serif text-sm font-bold text-[#F5EEE8]">
                 Laura Tagliari
               </p>
-              <p className="text-[10px] text-slate-500 mt-0.5">
+              <p className="text-[10px] text-[#E8D8C8]/55 mt-0.5">
                 Design de Apresentações Profissionais
               </p>
             </div>
@@ -30,20 +40,20 @@ export function Footer() {
 
           {/* Links */}
           <div className="flex flex-wrap gap-6">
-            {["Portfólio", "Serviços", "Processo", "Contato"].map((l) => (
+            {footerLinks.map((link) => (
               <a
-                key={l}
-                href={`#${l.toLowerCase()}`}
-                className="text-xs text-slate-500 hover:text-white transition-colors"
+                key={link.href}
+                href={link.href}
+                className="text-xs text-[#E8D8C8]/55 hover:text-[#F5EEE8] transition-colors"
               >
-                {l}
+                {link.label}
               </a>
             ))}
           </div>
 
           {/* Redes sociais */}
           <div className="flex items-center gap-2">
-            {primarySocials.map((social) => (
+            {socials.map((social) => (
               <SocialLink
                 key={social.id}
                 social={social}
@@ -53,12 +63,12 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-white/5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-          <p className="text-[10px] text-slate-600">
+        <div className="mt-10 pt-6 border-t border-[#E8D8C8]/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <p className="text-[10px] text-[#E8D8C8]/45">
             © 2026 Laura Tagliari. Todos os direitos reservados.
           </p>
 
-          <p className="text-[10px] text-slate-600">
+          <p className="text-[10px] text-[#E8D8C8]/45">
             Design com propósito. Apresentações com resultado.
           </p>
         </div>
